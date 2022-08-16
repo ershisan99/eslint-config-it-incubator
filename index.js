@@ -8,7 +8,6 @@ module.exports = {
     extends: [
       'eslint:recommended',
       'plugin:react/recommended',
-      'prettier',
       'prettier/prettier',
       'plugin:prettier/recommended',
     ],
@@ -29,12 +28,6 @@ module.exports = {
       'no-debugger': 'off',
       'no-undef': 'off',
       'no-unused-vars': 'off',
-      'prettier/prettier': [
-        'error',
-        {
-          endOfLine: 'auto',
-        },
-      ],
     },
     settings: {
       react: {
