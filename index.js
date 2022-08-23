@@ -11,6 +11,7 @@ module.exports = {
     'prettier/prettier',
     'plugin:import/recommended',
     'plugin:prettier/recommended',
+    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -63,6 +64,10 @@ module.exports = {
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/resolver': {
+      typescript: true,
+      node: true,
     },
   },
 }
