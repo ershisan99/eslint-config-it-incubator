@@ -10,8 +10,8 @@ module.exports = {
     'plugin:react/recommended',
     'prettier/prettier',
     'plugin:import/recommended',
-    'plugin:prettier/recommended',
     'plugin:import/typescript',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -65,9 +65,15 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       typescript: true,
       'import/resolver': {
+        typescript: {
+          alwaysTryTypes: true,
+        },
         node: {
           paths: ['src'],
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
